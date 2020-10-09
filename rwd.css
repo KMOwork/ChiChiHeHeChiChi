@@ -1,0 +1,473 @@
+@charset "UTF-8";
+/* ⼩型設備（⼩型平板電腦和⼤型⼿機，767px及以下） */
+@media only screen and (max-width:767px) {
+    #menu, .content-box, .MBnone, .MBhknone, .contentA{
+        display: none;
+    }
+    .MBmenu{
+        position: fixed;
+        width: 200px;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        z-index: 9999;
+    }
+    .MBlogo{
+        width: 150px;
+    }
+    .MBmenuitems{
+        width: 50px;
+    }
+    .ham {/* 方格 */
+        position: relative;
+        margin: 0 auto;
+        width: 25px;
+        height: 25px;
+        /* background-color: bisque; */
+        display: block;
+        z-index: 9999;
+        cursor: pointer;
+    }
+    .ham-origin {/* 控制裡面線段位置 */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    .ham-bar {/* 線段 */
+        height: 2px;
+        width: 25px;
+        position: absolute;
+        background: #d48375;
+        margin: -1px 0 0 -13px;
+        transition: all .5s;/* 點擊後變形 */
+    }
+    .ham-bar--top {/* top線位置 */
+        transform: translateY(-8px);
+    }
+    .ham-bar--bottom {/* bottom線位置 */
+        transform: translateY(8px);
+    }
+    #nav-toggle {
+        display: none;
+    }
+    #nav-toggle:checked ~ .ham .ham-bar--middle {
+        opacity: 0;
+    }
+    #nav-toggle:checked ~ .ham .ham-bar--top {
+        transform: rotate(-45deg);
+        background: white;
+    }
+    #nav-toggle:checked ~ .ham .ham-bar--bottom {
+        transform: rotate(45deg);
+        background: white;
+    }
+    /* Nav Style */
+    .MBitems {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        padding: 5%;
+        background: rgba(212, 131, 117, 0.8);
+        /* 用 translate 把選單藏到畫面右邊去 */
+        transform: translateX(-102%);
+        transition: transform .5s;
+        z-index: 9998;
+    }
+    #nav-toggle:checked ~ .MBitems {
+        transform: none;
+    }
+    .MBitems-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-family: 'Open Sans', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: .2rem;
+        text-align: center;
+    }
+    .MBmenu-item{
+        display: block;
+        margin: 8% auto;
+    }
+    .MBmenu-link {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .MBaboutA{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .MBaboutA a{
+        font-family: 'Open Sans', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: .2rem;
+        text-decoration: none;
+        color: rgb(212, 131, 117);
+    }
+    .content{
+        margin: 120px 0 50px;
+    }
+    .MBcontent{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .MBcontent li{
+        margin: 0 0 40px 0;
+        position: relative;
+    }
+    .MBimgmask{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        /* background-color: rgba(201, 151, 66, 0.01); */
+    }
+    .MBimgmask a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .MBa{
+        position: absolute;
+        background-color: rgba(255, 255, 255, .9);
+        padding: 10px;
+        border: double 3px #c99742;
+        bottom: -20px;
+        right: 10%;
+    }
+    .MBa p{
+        font-family: 'Open Sans', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+        font-size: .8rem;
+        font-weight: 300;
+        letter-spacing: .2rem;
+        text-decoration: none;
+        color: rgb(201, 151, 66);
+    }
+    .MBa a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    #MBabout{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 30px 100px;
+    }
+    #MBabout p{
+        color: rgb(212, 131, 117);
+        letter-spacing: .3rem;
+    }
+    .MBAsignature{
+        width: 30px;
+        position: absolute;
+        bottom: 35px;
+    }
+    /* footer */
+    #footer{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .MBfooterP{
+        margin: 40px 0 0;
+        align-self: flex-start;
+        line-height: 1.1rem;
+    }
+    .footerP{
+        position: relative;
+    }
+    h2{
+        width: 100%;
+    }
+    .fp1, .fp2{
+        display: none;
+    }
+    /* 分頁共用-底部menu */
+    .menuBottom0{
+        min-height: 1100px;
+    }
+    .menuBottom{
+        flex-direction: column;
+    }
+}
+/* 中型設備（⼤型平板電腦，768px及以上） */
+@media only screen and (min-width:768px) {
+    .MBlogo, .MBmenu, .MBaboutA, .MBcontent, #MBabout, .MBfooterP{
+        display: none;
+    }
+    .xujiP1{
+        width: 55%;
+        top: 12%;
+    }
+    .xujiP2{
+        width: 79%;
+        bottom: 20%;
+        left: 15%;
+    }
+    .xujiP3{
+        width: 26%;
+        top: 13%;
+        left: 35%;
+    }
+    .xujiP5{
+        width: 35%;
+        top: 17%;
+    }
+    .xujiP4{
+        width: 64%;
+        bottom: 9%;
+        right: 1%;
+    }
+    .yingguonai1{
+        width: 43%;
+        top: 10%;
+    }
+    .yingguonai3{
+        width: 50%;
+        top: 28%;
+    }
+    .yingguonai2{
+        width: 70%;
+        bottom: 8%;
+        left: 21%;
+    }
+    .hokkaidoBOX > div > div{
+        width: 32%;
+    }
+    .hokkaido1B1{
+        left: 4%;
+    }
+    .hokkaido11{
+        left: 2%;
+    }
+    .hokkaido12{
+        left: 37%;
+    }
+    .hokkaido13{
+        top: 32%;
+        left: 55%;
+    }
+    .hokkaido1B2{
+        right: 14%;
+    }
+    .hokkaido14{
+        top: 49%;
+    }
+    .hokkaido15{
+        top: 49%;
+        left: 69%;
+    }
+    .hokkaido16{
+        top: 14%;
+        left: 82%;
+    }
+    .hokkaido2B1{
+        left: 8%;
+    }
+    .hokkaido21{
+        top: 33%;
+    }
+    .hokkaido22{
+        top: 33%;
+        left: 35%;
+    }
+    .hokkaido23{
+        top: 11%;
+        left: 62%;
+    }
+    .hokkaido25{
+        top: 28%;
+        left: 42%;
+    }
+    .hokkaido24{
+        top: 54%;
+        left: 18%;
+    }
+    .hokkaido26{
+        top: 28%;
+        left: 77%;
+    }
+    .fourntwenty1{
+        width: 38%;
+        top: 13%;
+        left: 7%;
+    }
+    .fourntwenty2{
+        width: 43%;
+        top: 35%;
+        left: 30%;
+    }
+    .fourntwenty4{
+        width: 38%;
+        top: 43%;
+        left: 79%;
+    }
+    .fourntwenty3{
+        width: 41%;
+        top: 58%;
+        left: 54%;
+    }
+    /* footer */
+    h2{
+        width: 40%;
+    }
+    /* 分頁共用-底部menu */
+    .menuBottom img{
+        width: 170px;
+    }
+    .mask{
+        width: 170px;
+        height: 170px;
+    }
+    .mask a{
+        width: 170px;
+        height: 170px;
+    }
+}
+/* ⼤型設備（筆記型電腦/桌機，992px及以上） */
+@media only screen and (min-width:992px) {
+    .MBlogo, .MBmenu, .MBaboutA, .MBcontent, #MBabout, .MBfooterP{
+        display: none;
+    }
+    .xujiP1{
+        width: 40%;
+        top: 10%;
+    }
+    .xujiP2{
+        width: 48%;
+        bottom: 17%;
+        left: 20%;
+    }
+    .xujiP3{
+        width: 26%;
+        top: 13%;
+        left: 13%;
+    }
+    .xujiP5{
+        width: 34%;
+        top: 14%;
+    }
+    .xujiP4{
+        width: 34%;
+        bottom: 7%;
+        right: 23%;
+    }
+    .yingguonai1{
+        width: 30%;
+        top: 7%;
+    }.yingguonai3{
+        width: 41%;
+        top: 11%;
+    }
+    .yingguonai2{
+        width: 50%;
+        bottom: 15%;
+        left: 18%;
+    }
+    .hokkaidoBOX > div > div{
+        width: 22%;
+    }
+    .hokkaido1B1{
+        left: 15%;
+    }
+    .hokkaido11{
+        top: 18%;
+        left: 0;
+    }
+    .hokkaido12{
+        top: 18%;
+        left: 24%;
+    }
+    .hokkaido13{
+        top: 37%;
+        left: 43%;
+    }
+    .hokkaido1B2{
+        right: 15%;
+    }
+    .hokkaido14{
+        top: 40%;
+    }
+    .hokkaido15{
+        top: 40%;
+        left: 58%;
+    }
+    .hokkaido16{
+        top: 11%;
+        left: 78%;
+    }
+    .hokkaido2B1{
+        left: 18%;
+    }
+    .hokkaido21{
+        top: 18%;
+    }
+    .hokkaido22{
+        top: 28%;
+        left: 24%;
+    }
+    .hokkaido23{
+        top: 13%;
+        left: 44%;
+    }
+    .hokkaido25{
+        top: 35%;
+        left: 55%;
+    }
+    .hokkaido24{
+        top: 23%;
+        left: 34%;
+    }
+    .hokkaido26{
+        top: 27%;
+        left: 79%;
+    }
+    .fourntwenty1{
+        width: 26%;
+        top: 17%;
+        left: 10%;
+    }
+    .fourntwenty2{
+        width: 30%;
+        top: 14%;
+        left: 16%;
+    }
+    .fourntwenty4{
+        width: 30%;
+        top: 17%;
+        left: 71%;
+    }
+    .fourntwenty3{
+        width: 36%;
+        top: 38%;
+        left: 45%;
+    }
+    /* footer */
+    h2{
+        width: 30%;
+    }
+    /* 分頁共用-底部menu */
+    .menuBottom img{
+        width: 230px;
+    }
+    .mask{
+        width: 230px;
+        height: 230px;
+    }
+    .mask a{
+        width: 230px;
+        height: 230px;
+    }
+}

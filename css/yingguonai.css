@@ -1,0 +1,13 @@
+@charset "UTF-8";
+.content > div{
+    margin: 0 8% 5%;
+}
+.thanks{
+    margin: 0 0 5%;
+}
+.thanks p{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .4rem;
+    text-align: center;
+}

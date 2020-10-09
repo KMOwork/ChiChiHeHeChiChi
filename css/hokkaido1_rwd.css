@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* ⼩型設備（⼩型平板電腦和⼤型⼿機，767px及以下） */
+@media only screen and (max-width:767px) {
+    .view1{
+        margin: 0 0 5%;
+    }
+    .view1 p{
+        margin: 1% 8% 0;
+        color: #8d8d8d;
+    }
+}
+/* 中型設備（⼤型平板電腦，768px及以上） */
+@media only screen and (min-width:768px) {}
+/* ⼤型設備（筆記型電腦/桌機，992px及以上） */
+@media only screen and (min-width:992px) {}

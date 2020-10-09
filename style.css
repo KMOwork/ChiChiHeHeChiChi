@@ -1,0 +1,520 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Open+Sans:wght@300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, '微軟正黑體', 'Microsoft JhengHei', '黑體-繁', 'Heiti TC', sans-serif;
+}
+html, body{
+    height: 100%;
+}
+img{
+    display: block;
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+}
+/* container */
+.container {
+    display: flex;
+    flex-direction: column;
+    animation: fadeto 2s forwards;
+}
+/* go top */
+#top{
+    position: fixed;
+    right: 2%;
+    bottom: 10%;
+    width: 40px;
+    opacity: .8;
+    z-index: 9;
+    display: none;
+}
+/* main */
+.main {
+    flex: 1 0 auto;
+    display: flex;
+    height: inherit;
+    position: relative;
+    z-index: 10;
+}
+@keyframes fadeto{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+/* menu */
+#menu{
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-end;
+    width: 180px;
+    background-color: #d48375;
+    position: relative;
+    z-index: 10;
+}
+.menu-items{
+    position: sticky;
+    width: 100%;
+    bottom: 7%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40%;
+}
+h1{
+    position: relative;
+    padding: 13px;
+    flex: 1;
+}
+.items{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.items li{
+    font-family: 'Open Sans', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+    font-size: .3rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+}
+.items li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.items ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.items-food{
+    flex: 3;
+    align-items: center;
+    margin: 40% auto 80%;
+}
+.items-food li{
+    margin: 15% auto;
+}
+.items-about{
+    flex: 1;
+}
+/* ABOUT */
+#about-toggle{
+    display: none;
+}
+.about{
+    cursor: pointer;
+}
+.X{
+    display: none;
+}
+#about-toggle:checked ~ .about .X{
+    display: block;
+    position: fixed;
+    bottom: 6%;
+    left: 5.4%;
+    z-index: 100;
+    cursor: pointer;
+}
+.about-content{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(53, 68, 88, 0.9);
+    transform: translateX(-102%);
+    transition: transform .5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+#about-toggle:checked ~ .about-content{
+    transform: none;
+}
+.about-content p{
+    color: #ffffff;
+    letter-spacing: .3rem;
+}
+.ACtitle{
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 10% auto 8%;
+}
+.ACcontent{
+    font-size: .9rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    margin: 0 0 4%;
+}
+.ACsignature{
+    position: relative;
+    left: 30%;
+    /* bottom: 20%; */
+}
+/* 內容區 */
+.content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.content-box{
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 325px;
+    border-bottom: dotted 1px #c99742;
+}
+.content-box div{
+    position: absolute;
+}
+.content-box img{
+    box-shadow: 3px 3px 8px 0px #333333;
+}
+/* 旭集 */
+.xujiB1{
+    width: 50%;
+    height: 100%;
+    left: 9%;
+}
+.xujiP1{
+    width: 40%;
+    top: 10%;
+}
+.xujiP2{
+    width: 48%;
+    bottom: 10%;
+    left: 22%;
+}
+.xujiB2{
+    width: 50%;
+    height: 100%;
+    right: 8%;
+}
+.xujiP3{
+    width: 26%;
+    top: 13%;
+    left: 13%;
+}
+.xujiP5{
+    width: 34%;
+    top: 10%;
+    right: 0;
+}
+.xujiP4{
+    width: 34%;
+    bottom: 7%;
+    right: 23%;
+}
+/* 英國奶奶 */
+.yingguonai1{
+    width: 30%;
+    top: 7%;
+    left: 12%;
+}
+.yingguonaiB1{
+    width: 50%;
+    height: 100%;
+    right: 11%;
+}
+.yingguonai3{
+    width: 41%;
+    top: 11%;
+    right: 2%;
+}
+.yingguonai2{
+    width: 50%;
+    bottom: 15%;
+    left: 18%;
+}
+/* 北海道の洋菓子-1 */
+.hokkaidoBOX > div{
+    width: 50%;
+    height: 100%;
+}
+.hokkaidoBOX > div > div{
+    width: 22%;
+}
+.hokkaido1B1{
+    left: 15%;
+}
+.hokkaido11{
+    top: 10%;
+    left: 0;
+}
+.hokkaido12{
+    top: 10%;
+    left: 24%;
+}
+.hokkaido13{
+    top: 29%;
+    left: 43%;
+}
+.hokkaido1B2{
+    right: 15%;
+}
+.hokkaido14{
+    top: 36%;
+    left: 34%;
+}
+.hokkaido15{
+    top: 36%;
+    left: 58%;
+}
+.hokkaido16{
+    top: 7%;
+    left: 78%;
+}
+/* 北海道の洋菓子-2 */
+.hokkaido2B1{
+    left: 18%;
+}
+.hokkaido21{
+    top: 13%;
+}
+.hokkaido22{
+    top: 23%;
+    left: 24%;
+}
+.hokkaido23{
+    top: 8%;
+    left: 44%;
+}
+.hokkaido2B2{
+    right: 10%;
+}
+.hokkaido25{
+    top: 30%;
+    left: 55%;
+}
+.hokkaido24{
+    top: 18%;
+    left: 34%;
+}
+.hokkaido26{
+    top: 22%;
+    left: 79%;
+}
+/* FOUR'N TWENTY */
+.fourntwentyBOX{
+    border-bottom: none;
+}
+.fourntwenty1{
+    width: 26%;
+    top: 12%;
+    left: 10%;
+}
+.fourntwentyB1{
+    width: 50%;
+    height: 100%;
+    right: 15%;
+}
+.fourntwenty2{
+    width: 30%;
+    top: 9%;
+    left: 16%;
+}
+.fourntwenty4{
+    width: 30%;
+    top: 12%;
+    left: 71%;
+}
+.fourntwenty3{
+    width: 36%;
+    top: 33%;
+    left: 45%;
+}
+/* 連結 */
+.contentA{
+    position: absolute;
+    width: calc( 100% - 180px );
+    height: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+.contentA a{
+    display: block;
+    min-height: 325px;
+    width: 100%;
+    z-index: 1;
+}
+.contentA p{
+    display: none;
+    position: absolute;
+    font-family: 'Open Sans', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: .8rem;
+}
+.contentA > div{
+    position: relative;
+    min-height: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentA > div > div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.contentA a:hover ~ p{
+    display: block;
+    opacity: 1;
+}
+#xuji a:hover + div{
+    background-color: rgba(255, 149, 0, .6);
+}
+#yingguonai a:hover + div{
+    background-color: rgba(0, 166, 255, .6);
+}
+#hokkaido1 a:hover + div{
+    background-color: rgba(255, 0, 144, .6);
+}
+#hokkaido2 a:hover + div{
+    background-color: rgba(255, 208, 0, .6);
+}
+#fourntwenty a:hover + div{
+    background-color: rgba(25, 214, 41, .6);
+}
+/* footer */
+#footer{
+    position: relative;
+    min-height: 150px;
+    border-top: solid 2px #c99742;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.footerP{
+    position: absolute;
+    font-family: 'Open Sans', 'Noto Sans TC', sans-serif;
+    font-size: .3rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    color: #c99742;
+}
+.footerP a{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #c99742;
+}
+.fp1{
+    left: 2.5%;
+    bottom: 20%;
+}
+.fp2{
+    right: 2.5%;
+    bottom: 20%;
+}
+h2{
+    width: 30%;
+}
+/* 分頁共用 */
+.content{
+    align-items: center;
+}
+h3{
+    font-family: 'Open Sans', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #c99742;
+    letter-spacing: .5rem;
+    margin: 8% auto;
+    text-align: center;
+}
+.content p{
+    font-family: 'Open Sans', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+}
+.content > p{
+    margin: 0 8% 5%;
+}
+/* 分頁共用-底部menu */
+.menuBottom0{
+    position: relative;
+    min-height: 300px;
+    border-top: dotted 1px #c99742;
+    display: flex;
+    justify-content: center;
+}
+.menuBottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.menuBottom img{
+    box-shadow: 3px 3px 8px 0px #333333;
+    width: 230px;
+}
+.mask{
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.mask a{
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    z-index: 1;
+}
+.mask p{
+    position: absolute;
+    font-family: 'Open Sans', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: .8rem;
+    text-align: center;
+}
+.MBxuji{
+    background-color: rgba(255, 149, 0, .6);
+}
+.MByingguonai{
+    background-color: rgba(0, 166, 255, .6);
+}
+.MBhokkaido1{
+    background-color: rgba(255, 0, 144, .6);
+}
+.MBhokkaido2{
+    background-color: rgba(255, 208, 0, .6);
+}
+.MBfourntwenty{
+    background-color: rgba(25, 214, 41, .6);
+}
+.mask:hover{
+    opacity: 1;
+}
+/*分頁共用-內文*/
+.twoimgrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.img1{
+    margin: 0 2% 0 0;
+}
+.img2{
+    margin: 0 0 2% 0;
+}
+.shortP{
+    width: calc( 100% - 16% );
+}

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.view2{
+    margin: 0 8% 5%;
+}
+.view2 p{
+    margin: 1% 0 0 0;
+    color: #8d8d8d;
+}
+h4{
+    font-family: 'Open Sans', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #c99742;
+    letter-spacing: .4rem;
+    margin: 0 auto 8%;
+}
+.akaiicookies{
+    width: 35%;
+    margin: 0 0 5%;
+}
+.akaiicookiesC{
+    width: auto;
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 0 5%;
+}
+.akaiicookiesC > div{
+    width: 45%;
+}
+.cookies{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 5%;
+}
+.cookies >div{
+    width: auto;
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.cookies > div > div{
+    width: 45%;
+}
+.cookiesC1{
+    margin: 0 0 5%;
+    align-items: flex-end;
+}
+.arigatou{
+    margin: 0 0 5%;
+    padding: 0;
+}
+.arigatou p{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .4rem;
+    text-align: center;
+}

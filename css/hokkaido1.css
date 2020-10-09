@@ -1,0 +1,43 @@
+@charset "UTF-8";
+.view1{
+    margin: 0 8% 5%;
+}
+.view1 p{
+    margin: 1% 0 0 0;
+    color: #8d8d8d;
+}
+h4{
+    font-family: 'Open Sans', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #c99742;
+    letter-spacing: .4rem;
+    margin: 0 auto 8%;
+}
+.cookies{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 5%;
+}
+.cookies >div{
+    width: auto;
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.cookies > div > div{
+    width: 45%;
+}
+.cookiesC1{
+    margin: 0 0 5%;
+    align-items: flex-end;
+}
+.tsuzsuku{
+    margin: 0 0 5%;
+}
+.tsuzsuku p{
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: .4rem;
+}

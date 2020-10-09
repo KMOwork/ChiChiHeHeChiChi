@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.content > div{
+    margin: 0 8% 5%;
+}
+.xj5P{
+    margin: 1% 0 0 0;
+}
+.imgS{
+    width: 40%;
+}
+.arigatou{
+    padding: 0;
+}
+.arigatou p{
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .4rem;
+    text-align: center;
+}
